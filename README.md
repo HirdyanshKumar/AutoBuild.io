@@ -1,129 +1,157 @@
-🚀 AI-Powered App Builder — Project Roadmap
+# 🚀 AutoBuild.io
 
-🧩 Overview
+An **AI-driven full-stack website builder** that generates complete applications from simple text prompts — powered by AI agents, background jobs, and sandboxed execution.
 
-We’re building a full-stack AI-powered website builder that generates complete applications from simple prompts using AI agents, background jobs, and sandboxed execution.
+---
 
-🧱 1️⃣ Setup & Architecture
+## 🧩 Overview
 
-🎯 Goal: Define architecture and connect core tools.
+This project aims to create a **Next.js-based platform** where users can describe an idea in natural language, and the system automatically generates, reviews, and deploys a working full-stack web app — complete with authentication, database integration, and live previews.
 
-🧠 Tech Stack:
+---
 
-Next.js 15 + React 19 → Frontend framework and SSR
+## 🧱 1️⃣ Setup & Architecture
 
-Tailwind v4 + Shadcn/UI → Responsive, modern UI design
+### 🎯 Goal
+Define architecture and connect core tools for smooth, scalable app generation.
 
-tRPC → Type-safe API communication
+### 🧠 Tech Stack
+- **Frontend Framework:** Next.js 15 + React 19 (SSR support)
+- **UI Design:** Tailwind CSS v4 + Shadcn/UI
+- **API Communication:** tRPC (type-safe API layer)
+- **Database:** Prisma ORM + Neon (Serverless MySQL)
+- **Authentication & Billing:** Clerk
+- **Background Jobs & AI Agents:** Inngest
+- **Sandboxed Execution:** E2B + Docker
+- **AI Code Reviews:** CodeRabbit
+- **AI Models:** OpenAI, Anthropic, Grok (for generation intelligence)
 
-Prisma + Neon → Database ORM + Serverless MySQL
+---
 
-Clerk → Authentication and billing system
+## 🎨 2️⃣ Frontend Development
 
-Inngest → Background job orchestration + AI agents
+### 🎯 Goal
+Build a clean, interactive dashboard and prompt-based UI.
 
-E2B + Docker → Secure sandbox for executing generated code
+### 🧰 Tasks
+- Design **Landing Page** with authentication flow  
+- Build **Dashboard** with sidebar navigation  
+- Add **Prompt Input UI** for app generation  
+- Integrate **Live Preview** and **Code Explorer**  
+- Display **Credit & Usage Information**  
 
-CodeRabbit → AI-powered pull request (PR) reviews
+---
 
-AI Models (OpenAI, Anthropic, Grok) → Core intelligence for code generation
+## 🤖 3️⃣ AI Agent Integration
 
-🎨 2️⃣ Frontend Development
+### 🎯 Goal
+Enable AI agents to generate complete full-stack code from prompts.
 
-🎯 Goal: Build a clean, interactive dashboard and prompt UI.
+### 🧰 Tasks
+- Configure **Inngest Agents** to process prompts asynchronously  
+- Connect **OpenAI**, **Anthropic**, and **Grok APIs** for code generation  
+- Generate **frontend**, **backend**, and **database** code snippets  
+- Execute generated code securely using **E2B Sandboxes**  
 
-🧰 Tasks:
+---
 
-Design Landing Page with authentication
+## 💾 4️⃣ Database & API Layer
 
-Build Dashboard with sidebar navigation
+### 🎯 Goal
+Store user data and manage app generation records efficiently.
 
-Add Prompt Input UI for generating apps
+### 🧰 Tasks
+- Design **Prisma Models**: `User`, `Project`, `CreditUsage`  
+- Create **tRPC APIs** for project management, credits, and previews  
+- Connect **Prisma** with **Neon Database**  
 
-Integrate Live Preview and Code Explorer
+---
 
-Display Credit and Usage Information
+## 🔐 5️⃣ Authentication & Billing
 
-🤖 3️⃣ AI Agent Integration
+### 🎯 Goal
+Implement user management and AI generation limits.
 
-🎯 Goal: Generate full-stack code from user prompts.
+### 🧰 Tasks
+- Integrate **Clerk Authentication** (Sign-In, Sign-Up, Forgot Password)  
+- Add **Billing Plans** and **credit-based generation** system  
+- Track usage through **Prisma Database**  
 
-🧰 Tasks:
+---
 
-Configure Inngest agents to process prompts asynchronously
+## 🧱 6️⃣ Sandbox Execution & Live Previews
 
-Connect OpenAI, Anthropic, and Grok APIs for code generation
+### 🎯 Goal
+Allow users to safely run and preview AI-generated apps.
 
-Generate frontend, backend, and database code snippets
+### 🧰 Tasks
+- Use **E2B Cloud Sandboxes** for secure execution  
+- Connect **Docker templates** for different app types  
+- Generate and display **Preview URLs** within the dashboard  
 
-Execute results securely using E2B Sandboxes
+---
 
-💾 4️⃣ Database & API Layer
+## 🧑‍💻 7️⃣ Git Integration & AI Code Reviews
 
-🎯 Goal: Store user data and manage app generation records.
+### 🎯 Goal
+Ensure version control and maintain high code quality.
 
-🧰 Tasks:
+### 🧰 Tasks
+- Push generated code to **GitHub Repositories**  
+- Use **CodeRabbit** for AI-based PR reviews and feedback  
 
-Design Prisma models (User, Project, CreditUsage)
+---
 
-Create tRPC APIs for project management, credits, and previews
+## 🚀 8️⃣ Deployment & Monitoring
 
-Connect Prisma with Neon Database
+### 🎯 Goal
+Deploy the production-ready platform and ensure smooth performance.
 
-🔐 5️⃣ Authentication & Billing
+### 🧰 Tasks
+- Deploy via **Vercel** (frontend + server functions)  
+- Monitor **Inngest Job Performance** and runtime logs  
+- Track **user activity** and **app health metrics**  
 
-🎯 Goal: Manage users and control AI generation limits.
+---
 
-🧰 Tasks:
+## 🧪 9️⃣ Testing & Documentation
 
-Implement Clerk Auth (Sign-in, Sign-up, Forgot Password)
+### 🎯 Goal
+Finalize, test, and polish the project for launch.
 
-Add Billing Plans and credit-based generation system
+### 🧰 Tasks
+- Run **integration tests** across AI workflows and sandbox executions  
+- Write **developer** and **user documentation**  
+- Prepare **final demo presentation**  
 
-Track usage through Prisma database
+---
 
-🧱 6️⃣ Sandbox Execution & Live Previews
+## 🧠 Tech Stack Summary
 
-🎯 Goal: Let users run and test their AI-generated apps.
+| Category | Tool / Library |
+|-----------|----------------|
+| **Frontend** | Next.js 15, React 19 |
+| **Styling** | Tailwind CSS v4, Shadcn/UI |
+| **Backend & API** | tRPC, Inngest |
+| **Database** | Prisma, Neon |
+| **Auth & Billing** | Clerk |
+| **Sandbox & Execution** | E2B, Docker |
+| **AI Models** | OpenAI, Anthropic, Grok |
+| **AI Code Review** | CodeRabbit |
+| **Deployment** | Vercel |
 
-🧰 Tasks:
+---
 
-Use E2B Cloud Sandboxes to execute generated code safely
+## 🌟 End Goal
 
-Connect Docker templates for various app types
+A **fully AI-powered website builder** where users can:
+- 📝 Enter a simple text prompt  
+- ⚙️ Get a full-stack app generated, reviewed, sandboxed, and previewed  
+- 💳 Manage authentication, billing, and usage credits — seamlessly  
 
-Generate and display Preview URLs inside the dashboard
+---
 
-🧑‍💻 7️⃣ Git Integration & AI Code Reviews
+### 💡 Vision
+Empowering creators to go from **idea → production app** in minutes, using the power of **AI automation** and **modular full-stack generation**.
 
-🎯 Goal: Maintain version control and ensure quality.
-
-🧰 Tasks:
-
-Push generated code to GitHub repositories
-
-Use CodeRabbit for AI-based PR reviews and feedback
-
-🚀 8️⃣ Deployment & Monitoring
-
-🎯 Goal: Deploy production app and monitor performance.
-
-🧰 Tasks:
-
-Deploy with Vercel (frontend + server functions)
-
-Monitor Inngest job performance and runtime logs
-
-Track user activity and app health metrics
-
-🧪 9️⃣ Testing & Documentation
-
-🎯 Goal: Finalize and polish the project.
-
-🧰 Tasks:
-
-Run integration tests across AI workflows and sandbox executions
-
-Write clear developer & user documentation
-
-Prepare final demo presentation
+---
