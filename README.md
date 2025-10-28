@@ -1,157 +1,110 @@
-# 🚀 AutoBuild.io
-
-An **AI-driven full-stack website builder** that generates complete applications from simple text prompts — powered by AI agents, background jobs, and sandboxed execution.
-
----
+# ⚡ AdForge.io — AI-Powered Product Ads Generator
 
 ## 🧩 Overview
+**AdForge.io** is a full-stack AI-powered platform that transforms simple product images into scroll-stopping, professional ad creatives using **Artificial Intelligence**.  
+This project integrates **Next.js**, **Firebase**, and **ImageKit.io** to automate the entire ad creation workflow — from generating high-quality visuals and videos to securely hosting and managing them.
 
-This project aims to create a **Next.js-based platform** where users can describe an idea in natural language, and the system automatically generates, reviews, and deploys a working full-stack web app — complete with authentication, database integration, and live previews.
+## 🚨 Problem Statement
+In today’s digital economy, **small businesses and online sellers** struggle to create visually compelling advertisements.
 
----
+- Hiring professional designers or agencies is **expensive**.  
+- Traditional design tools require **time, skill, and creativity**.  
 
-## 🧱 1️⃣ Setup & Architecture
+As a result, many products fail to capture attention on social media and e-commerce platforms — leading to **low engagement** and **lost sales**.  
+This creates a strong need for a **smart, automated, and affordable ad creation solution**.
 
-### 🎯 Goal
-Define architecture and connect core tools for smooth, scalable app generation.
+## 💡 Proposed Solution
+**AdForge.io** solves these challenges by leveraging **AI** to automate ad generation.
 
-### 🧠 Tech Stack
-- **Frontend Framework:** Next.js 15 + React 19 (SSR support)
-- **UI Design:** Tailwind CSS v4 + Shadcn/UI
-- **API Communication:** tRPC (type-safe API layer)
-- **Database:** Prisma ORM + Neon (Serverless MySQL)
-- **Authentication & Billing:** Clerk
-- **Background Jobs & AI Agents:** Inngest
-- **Sandboxed Execution:** E2B + Docker
-- **AI Code Reviews:** CodeRabbit
-- **AI Models:** OpenAI, Anthropic, Grok (for generation intelligence)
+**User flow:**
+1. Upload a product image.  
+2. Enter a short prompt describing desired style/tone.  
+3. Receive a high-quality, ready-to-use ad image or video.
 
----
+**Key features:**
+- Automatic background enhancement  
+- Color and layout optimization  
+- Professional design generation via AI  
+- Secure cloud storage and fast delivery through ImageKit CDN
 
-## 🎨 2️⃣ Frontend Development
+## 🧱 1. Setup & Architecture
+**Goal:** Define the system architecture and integrate core technologies.
 
-### 🎯 Goal
-Build a clean, interactive dashboard and prompt-based UI.
+**Tech Stack:**
+- **Next.js + React + TypeScript** → Frontend & SSR  
+- **Firebase (Auth + Firestore + Hosting)** → Authentication, database, hosting  
+- **ImageKit.io** → Image upload, optimization, CDN delivery  
+- **OpenAI API** → AI model for ad creative generation  
+- **Framer Motion** → UI animations & transitions
 
-### 🧰 Tasks
-- Design **Landing Page** with authentication flow  
-- Build **Dashboard** with sidebar navigation  
-- Add **Prompt Input UI** for app generation  
-- Integrate **Live Preview** and **Code Explorer**  
-- Display **Credit & Usage Information**  
+## 🎨 2. Frontend Development
+**Goal:** Build an engaging and intuitive user interface.
 
----
+**Tasks:**
+- Design a landing page introducing the app  
+- Implement Firebase authentication (login/signup)  
+- Create a dashboard to upload images and enter prompts  
+- Display generated ads with download/share options  
+- Show credits and usage information
 
-## 🤖 3️⃣ AI Agent Integration
+## 🧠 3. AI Image Generation Engine
+**Goal:** Automate ad generation using AI models.
 
-### 🎯 Goal
-Enable AI agents to generate complete full-stack code from prompts.
+**Tasks:**
+- Connect OpenAI Image/Video APIs for creative generation  
+- Use structured prompts for professional designs  
+- Support multiple formats (square, portrait, landscape)  
+- Generate optional video ad templates from static images
 
-### 🧰 Tasks
-- Configure **Inngest Agents** to process prompts asynchronously  
-- Connect **OpenAI**, **Anthropic**, and **Grok APIs** for code generation  
-- Generate **frontend**, **backend**, and **database** code snippets  
-- Execute generated code securely using **E2B Sandboxes**  
+## 🗂️ 4. Database & Asset Management
+**Goal:** Manage and store all user data and generated assets.
 
----
+**Tasks:**
+- Set up Firestore for user and ad metadata  
+- Implement CRUD operations for ad records  
+- Use ImageKit for secure uploads and optimization  
+- Generate optimized URLs for fast web delivery
 
-## 💾 4️⃣ Database & API Layer
+## 🔐 5. Authentication & User Flow
+**Goal:** Enable personalized user experiences.
 
-### 🎯 Goal
-Store user data and manage app generation records efficiently.
+**Tasks:**
+- Integrate Firebase Authentication (Email/Google login)  
+- Enable role-based access for free and premium users  
+- Provide dashboard to view ad history and credit usage
 
-### 🧰 Tasks
-- Design **Prisma Models**: `User`, `Project`, `CreditUsage`  
-- Create **tRPC APIs** for project management, credits, and previews  
-- Connect **Prisma** with **Neon Database**  
+## ⚡ 6. Optimization & Delivery
+**Goal:** Ensure fast and responsive media serving.
 
----
+**Tasks:**
+- Use ImageKit transformations for dynamic resizing  
+- Implement lazy loading and caching  
+- Optimize image formats for better performance
 
-## 🔐 5️⃣ Authentication & Billing
+## 🚀 7. Deployment & Hosting
+**Goal:** Launch a production-ready, scalable app.
 
-### 🎯 Goal
-Implement user management and AI generation limits.
+**Tasks:**
+- Deploy frontend and backend via Firebase Hosting  
+- Connect custom domain and SSL  
+- Test CDN performance and delivery speed
 
-### 🧰 Tasks
-- Integrate **Clerk Authentication** (Sign-In, Sign-Up, Forgot Password)  
-- Add **Billing Plans** and **credit-based generation** system  
-- Track usage through **Prisma Database**  
+## 🧪 8. Testing & Documentation
+**Goal:** Ensure a robust and maintainable application.
 
----
+**Tasks:**
+- Test AI workflows end-to-end (input → output)  
+- Verify authentication and data integrity  
+- Prepare developer and user documentation  
+- Create final project presentation and demo
 
-## 🧱 6️⃣ Sandbox Execution & Live Previews
+## 🎯 Expected Outcome
+By the end of this project, **AdForge.io** will be a fully functional, deployable AI Product Ads Generator capable of:
 
-### 🎯 Goal
-Allow users to safely run and preview AI-generated apps.
+- Generating professional ad creatives within seconds  
+- Securely managing and storing all user assets  
+- Instantly serving visuals via CDN  
+- Reducing ad creation costs and time by **over 80%**
 
-### 🧰 Tasks
-- Use **E2B Cloud Sandboxes** for secure execution  
-- Connect **Docker templates** for different app types  
-- Generate and display **Preview URLs** within the dashboard  
+**AdForge.io** empowers small businesses and marketers to produce **high-quality ads effortlessly**, making digital promotion **accessible, affordable, and AI-driven.**
 
----
-
-## 🧑‍💻 7️⃣ Git Integration & AI Code Reviews
-
-### 🎯 Goal
-Ensure version control and maintain high code quality.
-
-### 🧰 Tasks
-- Push generated code to **GitHub Repositories**  
-- Use **CodeRabbit** for AI-based PR reviews and feedback  
-
----
-
-## 🚀 8️⃣ Deployment & Monitoring
-
-### 🎯 Goal
-Deploy the production-ready platform and ensure smooth performance.
-
-### 🧰 Tasks
-- Deploy via **Vercel** (frontend + server functions)  
-- Monitor **Inngest Job Performance** and runtime logs  
-- Track **user activity** and **app health metrics**  
-
----
-
-## 🧪 9️⃣ Testing & Documentation
-
-### 🎯 Goal
-Finalize, test, and polish the project for launch.
-
-### 🧰 Tasks
-- Run **integration tests** across AI workflows and sandbox executions  
-- Write **developer** and **user documentation**  
-- Prepare **final demo presentation**  
-
----
-
-## 🧠 Tech Stack Summary
-
-| Category | Tool / Library |
-|-----------|----------------|
-| **Frontend** | Next.js 15, React 19 |
-| **Styling** | Tailwind CSS v4, Shadcn/UI |
-| **Backend & API** | tRPC, Inngest |
-| **Database** | Prisma, Neon |
-| **Auth & Billing** | Clerk |
-| **Sandbox & Execution** | E2B, Docker |
-| **AI Models** | OpenAI, Anthropic, Grok |
-| **AI Code Review** | CodeRabbit |
-| **Deployment** | Vercel |
-
----
-
-## 🌟 End Goal
-
-A **fully AI-powered website builder** where users can:
-- 📝 Enter a simple text prompt  
-- ⚙️ Get a full-stack app generated, reviewed, sandboxed, and previewed  
-- 💳 Manage authentication, billing, and usage credits — seamlessly  
-
----
-
-### 💡 Vision
-Empowering creators to go from **idea → production app** in minutes, using the power of **AI automation** and **modular full-stack generation**.
-
----
